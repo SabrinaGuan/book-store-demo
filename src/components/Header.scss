@@ -1,0 +1,64 @@
+@use "sass:color";
+// 派生颜色
+$gradient-start: #667eea;
+$gradient-end: #764ba2;
+$gradient-start-dark: color.adjust($gradient-start, $lightness: -10%);
+$gradient-end-dark: color.adjust($gradient-end, $lightness: -10%);
+
+.header {
+  background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__logo-icon {
+    font-size: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  &__add-btn {
+    border: 2px solid white;
+    
+    &:hover {
+      background-color: transparent;
+      color: white;
+    }
+  }
+}

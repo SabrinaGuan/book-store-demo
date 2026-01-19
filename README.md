@@ -2,7 +2,7 @@
 
 ## 项目结构
 book-store/
-'''
+```
 ├── src/
 │   ├── components/          # 组件（每个都有.tsx和.scss文件）
 │   │   ├── BookList.tsx
@@ -25,7 +25,7 @@ book-store/
 │   │   └── main.scss
 │   ├── App.tsx
 │   └── main.tsx
-'''
+```
 ## 功能
 
 书籍列表显示：书名、价格、分类、描述
